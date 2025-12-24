@@ -80,7 +80,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Care.xyz কেন বেছে নেবেন?
+                Care.io কেন বেছে নেবেন?
               </h2>
               <p className="text-lg text-gray-600 mb-6">
                 আমরা বাংলাদেশের সবচেয়ে নির্ভরযোগ্য care service platform।
