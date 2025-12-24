@@ -1,54 +1,8 @@
 import Link from "next/link";
+import { getAllServices } from "@/lib/db";
 
-// এখানে আপনার services গুলো define করুন
-// পরে MongoDB থেকে fetch করবেন
-const services = [
-  {
-    _id: "1",
-    name: "Baby Care Service",
-    shortDescription: "আপনার শিশুর জন্য trained এবং experienced babysitter",
-    icon: "👶",
-    chargePerHour: 200,
-    chargePerDay: 1500,
-    features: [
-      "Trained Babysitters",
-      "Background Verified",
-      "24/7 Available",
-      "Emergency Support",
-    ],
-  },
-  {
-    _id: "2",
-    name: "Elderly Care Service",
-    shortDescription:
-      "বয়স্ক ব্যক্তিদের জন্য compassionate এবং professional care",
-    icon: "👴",
-    chargePerHour: 250,
-    chargePerDay: 1800,
-    features: [
-      "Medical Support",
-      "Companion Care",
-      "Medication Management",
-      "Daily Activities Help",
-    ],
-  },
-  {
-    _id: "3",
-    name: "Sick People Care Service",
-    shortDescription: "অসুস্থ ব্যক্তিদের জন্য specialized medical care",
-    icon: "🏥",
-    chargePerHour: 300,
-    chargePerDay: 2000,
-    features: [
-      "Trained Nurses",
-      "Medical Equipment",
-      "Doctor Consultation",
-      "Emergency Response",
-    ],
-  },
-];
-
-export default function ServicesSection() {
+export default async function ServicesSection() {
+  const services = await getAllServices();
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,7 +59,7 @@ export default function ServicesSection() {
                 </div>
 
                 <Link
-                  href={`/service/${service._id}`}
+                  href={`/service/${service._id.toString()}`}
                   className="block w-full text-center py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
                 >
                   View Details →

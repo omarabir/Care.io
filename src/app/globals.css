@@ -65,3 +65,16 @@ html {
 .animate-spin {
   animation: spin 1s linear infinite;
 }
+
+/* Gradient background animation */
+.bg-size-200 {
+  background-size: 200%;
+}
+
+.bg-pos-0 {
+  background-position: 0%;
+}
+
+.bg-pos-100 {
+  background-position: 100%;
+}
