@@ -9,6 +9,7 @@ import SessionProvider from "@/components/SessionProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  metadataBase: new URL(process.env.NEXTAUTH_URL || "http://localhost:3000"),
   title: "Care.xyz - Baby Sitting & Elderly Care Service",
   description:
     "নির্ভরযোগ্য এবং trusted care service provider। শিশু, বৃদ্ধ এবং অসুস্থ ব্যক্তিদের জন্য সেরা caregiving service।",
